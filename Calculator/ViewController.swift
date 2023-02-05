@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         
         isFinishedTypingNumber = true
         
+        guard let number = Double(displayLabel.text!) else {
+            fatalError(" Cannot convert display label taxt to a Double")
+        }
+        
         //What should happen when a non-number button is pressed
         
     }
