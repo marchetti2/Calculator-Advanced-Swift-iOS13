@@ -23,6 +23,16 @@ class ViewController: UIViewController {
             fatalError(" Cannot convert display label taxt to a Double")
         }
         
+        if sender.currentTitle == "+/-" {
+            displayLabel.text = String(number * -1)
+        }
+        if sender.currentTitle == "AC" {
+            displayLabel.text = "0"
+        }
+        if sender.currentTitle == "%" {
+            displayLabel.text = String(number / 100)
+        }
+        
         //What should happen when a non-number button is pressed
         
     }
