@@ -20,7 +20,6 @@ struct CalculatorLogic {
         
         if let n = number {
             
-            
             if symbol == "+/-" {
                 return n * -1
             }
@@ -32,9 +31,7 @@ struct CalculatorLogic {
             }
             
         }
+        return nil
     }
     
-    return nil
-}
-
 }

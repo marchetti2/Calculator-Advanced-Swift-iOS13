@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     
     var displayValue: Double {
         get {
-            
             guard let currentDisplayValue = Double(displayLabel.text!) else {
                 fatalError("cannot convert display label to a Double!")
             }
@@ -27,11 +26,13 @@ class ViewController: UIViewController {
         }
     }
     
-    let calculator = CalculatorLogic()
+    var calculator = CalculatorLogic()
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
         isFinishedTypingNumber = true
+        
+        calculator.setNumber(displayValue)
         
         guard let result = calculator.calculate(symbol: sender.currentTitle!) else {
             fatalError("The result of the calculation is nil")
