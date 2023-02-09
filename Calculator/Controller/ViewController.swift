@@ -34,9 +34,7 @@ class ViewController: UIViewController {
         
         calculator.setNumber(displayValue)
         
-        guard let result = calculator.calculate(symbol: sender.currentTitle!) else {
-            fatalError("The result of the calculation is nil")
-        }
+        guard let result = calculator.calculate(symbol: sender.currentTitle!) else { return }
         
         displayValue = result
         
